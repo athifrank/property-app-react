@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from "./Components/Header/Header";
 import Menu from "./Components/Menu/Menu"
-import {Switch,Route,BrowserRouter} from 'react-router-dom'
+import {Switch,Route} from 'react-router-dom'
 import Details from './Components/Property/details'
 import Main from './Components/Property/main'
 class App extends Component {

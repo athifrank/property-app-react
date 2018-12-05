@@ -8,7 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {withRouter,BrowserRouter} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
@@ -72,20 +72,21 @@ class Details extends React.Component{
                <React.Fragment>
                 <IconButton aria-label="Add to favorites" onClick={()=>this.removeToFav(res)} ref="refone" style={{color:'green'}}>
                     <FavoriteIcon/>
-                 </IconButton> <p>Property Added to the wish list</p></React.Fragment>
+                 </IconButton> <p style={{fontSize:'12px',color:'green',margin:'-5px'}}>It is in wish list</p></React.Fragment>
            )
        }else{
            return(
                <React.Fragment>
                <IconButton aria-label="Add to favorites"  onClick={()=>this.addToFav(res)} ref="refone" >
                    <FavoriteIcon />
-                </IconButton><p>Property Not Added to the wish list</p></React.Fragment>
+                </IconButton><p style={{fontSize:'12px',color:'red',margin:'-5px'}}> Not in wish list</p></React.Fragment>
            )
        }
     }
 
    render(){
-       let val=this.state.data.filter(e=>e.id==this.props.match.params.id);
+       
+       let val=this.state.data.filter(e=>parseInt(e.id)===parseInt(this.props.match.params.id));
        const { vertical, horizontal, open } = this.state;
 
     return(
