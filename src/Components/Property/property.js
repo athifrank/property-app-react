@@ -24,7 +24,9 @@ const styles = {
 class Property extends React.Component{
 constructor(props){
     super(props);
-
+    this.state={
+      val:''
+    }
 }
 getDetails(id){
     this.props.history.push({

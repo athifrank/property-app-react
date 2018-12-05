@@ -29,7 +29,7 @@ describe('<Header />', () => {
   it('checking incoming props',()=>{
     const wrap=mount(<Header show={true}/>);
     const val=wrap.props()
-    console.log('props value ',val)
+   // console.log('props value ',val)
     expect(val).toBeTruthy()
   })
 

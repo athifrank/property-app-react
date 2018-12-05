@@ -53,6 +53,9 @@ class Details extends React.Component{
        
     }
 
+    add(){
+        return 'add'
+    }
     removeToFav(res){
         localStorage.removeItem(`addfav${res.id}`);
         this.setState({fav:''})
