@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from "./Components/Header/Header";
 import Menu from "./Components/Menu/Menu"
-import {Switch,Route} from 'react-router-dom'
+import {Switch,Route,BrowserRouter} from 'react-router-dom'
 import Details from './Components/Property/details'
 import Main from './Components/Property/main'
 class App extends Component {
@@ -23,12 +23,10 @@ class App extends Component {
         <div className="app-body">
           <Menu show={this.state.show}/>
           <div className="content">
-          
           <Switch>
             <Route path="/" exact component={Main}/>
             <Route path="/details/:id" component={Details}/>
           </Switch>
-
           </div>
         </div>
       </div>
